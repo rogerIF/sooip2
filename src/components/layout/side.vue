@@ -24,72 +24,69 @@
 </template>
 
 <script>
-  import pageArray from "../../../tools/muti-page-config/muti-page-config-es6";
+import pageArray from "../../../tools/muti-page-config/muti-page-config-es6";
 export default {
   name: "GWSide",
-    props:{
-      // 展开宽度
-        expanseWidth:{
-            type:String,
-            default:'200px'
-        },
-        // 折叠宽度
-        collapseWidth:{
-            type:String,
-            default:'50px'
-        }
+  props: {
+    // 展开宽度
+    expanseWidth: {
+      type: String,
+      default: "200px"
     },
-    data() {
-        return {
-          isCollapse: false,
-          projectName:'iSearch 开发平台',
-          pageArray
-        };
+    // 折叠宽度
+    collapseWidth: {
+      type: String,
+      default: "50px"
+    }
+  },
+  data() {
+    return {
+      isCollapse: false,
+      projectName: "iSearch 开发平台",
+      pageArray
+    };
+  },
+  methods: {
+    select(key) {
+      this.$emit("selectMenu", "/" + key);
     },
-    methods: {
-      select(key) {
-            this.$emit("selectMenu",'/'+key);
-        },
-        sideWidthChange(){
-            this.isCollapse=!this.isCollapse;
-            this.$emit("widthChange",this.sideWidth)
-        }
-    },
-    computed:{
-      sideWidth(){
-          return this.isCollapse ? this.collapseWidth :this.expanseWidth;
-      }
-
-    },
+    sideWidthChange() {
+      this.isCollapse = !this.isCollapse;
+      this.$emit("widthChange", this.sideWidth);
+    }
+  },
+  computed: {
+    sideWidth() {
+      return this.isCollapse ? this.collapseWidth : this.expanseWidth;
+    }
+  }
 };
 </script>
 
 <style lang="scss">
-  .logo-container{
-    display: inline-block;
+.logo-container {
+  display: inline-block;
+}
+.home-logo {
+  height: 1em;
+  vertical-align: middle;
+}
+.project-name-container {
+  height: 60px;
+  line-height: 60px;
+}
+.project-name {
+  display: inline-block;
+  padding: 0 5px;
+}
+.collapse-icon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.gw-side {
+  .menuIcon {
+    margin-right: 5px;
+    color: #fff;
   }
-  .home-logo{
-
-    height: 1em;
-    vertical-align: middle;
-  }
-  .project-name-container {
-    height: 60px;
-    line-height: 60px;
-  }
-  .project-name{
-    display: inline-block;
-    padding: 0 5px;
-  }
-  .collapse-icon {
-    cursor: pointer;
-    margin-left:5px;
-  }
-  .gw-side{
-      .menuIcon{
-          margin-right: 5px;
-          color:#fff;
-      }
-  }
-
+}
 </style>
