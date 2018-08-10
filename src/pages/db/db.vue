@@ -1,13 +1,13 @@
 <template>
   <div id="app">
     <el-row class="gw-db">
-      <el-card class="left">
+      <el-card class="left" shadow="never">
         <div slot="header">
           <span><i class="fa fa-database"></i>数据库</span>
         </div>
         <tree @clickNode="clickTreeNode"></tree>
       </el-card>
-      <el-card class="right">
+      <el-card class="right" shadow="never">
         <db-create v-if="isRootNode"></db-create>
         <db-query v-else></db-query>
 
