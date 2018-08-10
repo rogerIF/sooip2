@@ -18,7 +18,7 @@
 </template>
 <script>
 import tree from "./db-tree";
-import dbCreate from "./db-create";
+import dbCreate from "./db-createlist";
 import dbQuery from "./db-query";
 export default {
   components: {

@@ -1,6 +1,16 @@
 <!--数据库管理-创建数据库-->
 <template>
   <div class="gw-db-create">
+
+      <div>
+          <el-steps :active="1">
+              <el-step title="步骤 1" icon="el-icon-edit"></el-step>
+              <el-step title="步骤 2" icon="el-icon-upload"></el-step>
+              <el-step title="步骤 3" icon="el-icon-picture"></el-step>
+          </el-steps>
+      </div>
+
+
     <div class="dbc_txt">
         <el-input v-model="input" class="dbinput" placeholder="请输入数据库名称进行查找"></el-input>
         <el-button type="primary">查找</el-button>
@@ -82,6 +92,7 @@
       </template>
 
   </div>
+
 </template>
 <script>
 export default {
