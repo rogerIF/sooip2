@@ -5,23 +5,36 @@
         <div slot="header">
           <span><i class="fa fa-database"></i>数据库</span>
         </div>
-        <tree></tree>
+        <tree @clickNode="clickTreeNode"></tree>
       </el-card>
       <el-card class="right">
-          <db-create></db-create>
+        <db-create v-if="isRootNode"></db-create>
+        <db-query v-else></db-query>
+
       </el-card>
     </el-row>
-
 
   </div>
 </template>
 <script>
 import tree from "./db-tree";
 import dbCreate from "./db-create";
+import dbQuery from "./db-query";
 export default {
   components: {
     tree,
-    dbCreate
+    dbCreate,
+    dbQuery
+  },
+  data() {
+    return {
+      isRootNode: true
+    };
+  },
+  methods: {
+    clickTreeNode(data, isRootNode) {
+      this.isRootNode = isRootNode;
+    }
   }
 };
 </script>
