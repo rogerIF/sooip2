@@ -187,7 +187,18 @@ export default {
           }
       }
 
-  }
+  },
+  computed: {
+    currentTreeNodeId() {
+      return this.$root.currentTreeNodeId;
+    }
+  },
+  watch: {
+    currentTreeNodeId(newValue, oldValue) {
+      console.log("watch",newValue,oldValue)
+    }
+  },
+
 };
 </script>
 

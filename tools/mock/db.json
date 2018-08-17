@@ -1,0 +1,40 @@
+{
+  "token": [
+    {
+      "id": "0",
+      "value": "597124f5-d248-4d30-b7bf-85180355cefc",
+      "success": "true"
+    }
+
+  ],
+  "menus": [
+    {
+      "name": "监控管理",
+      "path": "/monitor",
+      "component": "views/monitor"
+    },
+    {
+      "name": "系统管理",
+      "path": "/system",
+      "component": "views/system"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "test001",
+      "password": "111111"
+    },
+    {
+      "id": "2",
+      "username": "test002",
+      "password": "111111"
+    },
+    {
+      "id": "3",
+      "username": "test003",
+      "password": "44444"
+    }
+
+  ]
+}

@@ -24,3 +24,10 @@ npm run lint
 ```
 npm run test:unit
 ```
+
+### 环境变量
+```
+CONTEXT_PATH=/自定义/
+
+API_DOMAIN=自定义
+```

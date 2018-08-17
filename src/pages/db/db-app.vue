@@ -1,19 +1,6 @@
 <template>
   <div id="app">
-    <el-row class="gw-db">
-      <el-card class="left" shadow="never">
-        <div slot="header">
-          <span><i class="fa fa-database"></i>数据库</span>
-        </div>
-        <tree @clickNode="clickTreeNode"></tree>
-      </el-card>
-      <el-card class="right" shadow="never">
-        <db-create v-if="isRootNode"></db-create>
-        <db-query v-else></db-query>
-
-      </el-card>
-    </el-row>
-
+      <router-view/>
   </div>
 </template>
 <script>
@@ -32,9 +19,9 @@ export default {
     };
   },
   methods: {
-    clickTreeNode(data, isRootNode) {
-      this.isRootNode = isRootNode;
-    }
+  },
+  mounted:function () {
+    this.$router.push("/queryText")
   }
 };
 </script>

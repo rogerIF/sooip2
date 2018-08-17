@@ -6,12 +6,15 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "js-mock": "json-server ./tools/mock/db.js --static ./node_modules/json-server/dist/ --port 9999 --watch",
+    "json-mock": "json-server ./tools/mock/db.json --static ./node_modules/json-server/dist/ --port 9999 --watch"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.4.5",
     "font-awesome": "^4.7.0",
+    "js-cookie": "^2.2.0",
     "normalize.css": "^8.0.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
